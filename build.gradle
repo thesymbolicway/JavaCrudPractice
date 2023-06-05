@@ -4,7 +4,7 @@ plugins {
     id 'java'
 }
 
-group = 'com.example.emp'
+group = 'com.example.emp.Student'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -19,8 +19,14 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-tasks.named('bootRun') {
+springBoot {
     mainClass = 'com.example.emp.Student'
+}
+
+bootJar {
+    manifest {
+        attributes 'Start-Class': 'com.example.emp.Student'
+    }
 }
 
 test {

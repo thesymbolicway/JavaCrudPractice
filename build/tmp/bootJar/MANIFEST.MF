@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Start-Class: com.example.emp.Student
+Start-Class: com.example.emp.domain.Student
 Main-Class: org.springframework.boot.loader.JarLauncher
 Spring-Boot-Version: 2.7.0
 Spring-Boot-Classes: BOOT-INF/classes/

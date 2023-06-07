@@ -1,14 +1,10 @@
 package com.example.emp.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@Entity
+@SpringBootApplication
 public class Student {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String studentname;
     private String course;
@@ -17,4 +13,8 @@ public class Student {
     // Getters and setters
 
     // Constructors
+
+    public static void main(String[] args) {
+        SpringApplication.run(Student.class, args);
+    }
 }

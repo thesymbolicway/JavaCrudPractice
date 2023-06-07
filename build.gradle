@@ -4,7 +4,7 @@ plugins {
     id 'java'
 }
 
-group = 'com.example.emp.Student'
+group = 'com.example.emp'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -15,17 +15,17 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web:2.7.0'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.7.0'
-    implementation 'mysql:mysql-connector-java'
+    implementation 'mysql:mysql-connector-java' // Add this line for MySQL connector
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 springBoot {
-    mainClass = 'com.example.emp.Student'
+    mainClass = 'com.example.emp.domain.Student'
 }
 
 bootJar {
     manifest {
-        attributes 'Start-Class': 'com.example.emp.Student'
+        attributes 'Start-Class': 'com.example.emp.domain.Student'
     }
 }
 
